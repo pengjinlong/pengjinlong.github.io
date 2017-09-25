@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>forty3</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="pengjinlong,"> 
+    
+    <meta name="author" content="pengjinlong"> 
+    <link rel="alternative" href="atom.xml" title="forty3" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="/css/diaspora.css">
+
+</head>
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle"></h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div>
+        <h1 class="title"></h1>
+        <div class="stuff">
+            <span>九月 25, 2017</span>
+        </div>
+        <div class="content markdown">
+            <h1 id="数组方法："><a href="#数组方法：" class="headerlink" title="数组方法："></a>数组方法：</h1><p>push()返回的是改变后的数组长度，pop（）返回被移除的元素<br>1、concat()：会先创建当前数组的一个副本，然后将接收到的参数添加到这个副本的末尾，最后返回新构建的数组。<br>2、<strong>slice（）和substring（）都可以返回字符串指定区间</strong><br>slice() :基于当前数组中的一个或多个项创建一个新数组，可以接受一或两个参数，即要返回项的起始和结束位置。在只有一个参数的情况下，slice（）方法返回从该参数指定位置开始到当前数组末尾的所有项。如果两个参数，该方法返回起始和结束位置之间的项，但不包括结束位置的项。slice（）不会影响原始数组。<br><strong>如果slice（）方法的参数中有一个负数，则用数组长度加上该数来确定相应的位置。例如，在一个包含5项的数组上调用slice（-2，-1）与调用slice（3,4）得到结果相同。如果结束位置小于起始位置，返回空数组</strong><br>区别：对负数参数的处理方式，substring（）会将它视为从0开始的计数形式，而slice则会将它与字符串长度相加。因此，如果我们传给他们的参数是（1，-1）的话，实际情况分别是substring（1,0）和slice（1,s.length-1）</p>
+<p>3、splice（）始终返回一个数组，数组包含从原始数组中删除的项，如果没有删除返回一个空数组。<br>        删除：指定2个参数，要删除的第一项的位置和要删除的项数，如splice（0,2）会删除前两项。<br>        插入：指定3个参数：起始位置，0（要删除的项数），要插入的项<br>        替换：<br>4.位置方法：<br>（1）indexOf（）接收一或两个参数：要查找的项和查找起始点位置索引。<br>（2）lastIndexOf（）末尾向前查找<br>5、迭代方法<br>（1）every（）：对数组中的每一项运行给定函数，如果该函数对每一项都返回true，则返回true<br>（2）filter（）：对数组中的每一项运行给定函数，返回该函数会返回true的项组成的数组。<br>（3）forEach（）：对数组中的每一项运行给定函数，没有返回值<br>（4）map（）：对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。<br>（5）some（）：对数组中的每一项运行给定函数，如果该函数对任一项返回true，则返回true<br>6迭代方法：<br>reduce（）和reduceRight（）。这两个方法都会迭代数组的所有项，构建一个最终返回的值。<br>其中reduce（）从数组第一项开始，逐个遍历数组。reduceRight（）则从最后一项开始。<br>接收4个参数：前一个值，当前值，项的索引和数组对象。这个函数返回的任何值都会作为第一个参数传给下一项。<br>使用reduce（）求数组所有值得和：<br>var values = [1,2,3,43,3]<br>var sum = values.reduce(function(prev,cur,index,array) {return prev+cur; })<br>alert(sum) </p>
+<p>7、eval（）：会将其输入字符串当做js代码执行（有毒，少用为妙）</p>
+<p>split（）：分割字符串成一个数组，可以视为join的反操作</p>
+<p>获取某个max和min之间的值：（（max-min）<em>Math.random（））+min<br>例如，获取2到10之间的数：8</em>Math.random（）+2</p>
+<p>正则表达式为参数的字符串方法：<br>match（）：返回包含匹配内容数组<br>search（）：返回第一个匹配内容所在位置<br>replace（）：将匹配的文本替换成指定的字符串<br>split（）：根据指定的正则表达式将目标字符串分割成若干个数组元素</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="http://link.hhtjim.com/baidu/368589.mp3">
+            </audio>
+        </div>
+        
+<div class="comment link" data-id="2017/09/25/数组方法/" data-title="" data-url="http://yoursite.com/2017/09/25/数组方法/" data-shortname="pengjinlong">查看评论</div>
+
+
+    </div>
+</div>
+
+    </div>
+</div>
+</body>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-69833742-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</html>
