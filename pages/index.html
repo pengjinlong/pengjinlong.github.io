@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{padding:0;margin:0;list-style: none;text-decoration: none;}
+		body{background: #f5f5f5;}
+		a{
+			color: #434343;
+			text-align: center;
+		}
+		h3 {text-align: center;}
+		p{
+			text-align: center;
+		}
+		.content {
+			width: 1226px;
+			height: 614px;
+			margin: 50px auto;
+			box-shadow: 0 0 4px #f5f5f5;
+			padding: 10px;
+		}
+		.content .left {
+			width: 234px;
+			height: 614px;
+			float: left;
+		}
+		.content .right {
+			width: 992px;
+			height: 614px;
+			float: left;
+		}
+		.right ul li {
+			position: relative;
+			top:0;
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin: 0 0 14px 14px;
+			background: #fff;
+			overflow: hidden;
+			transition: 0.5s;
+		}
+		.right ul li:hover {
+			box-shadow: 0 10px 8px #ccc;
+			top:-5px;
+		}
+		.right ul li:hover .comments{
+			bottom: 0;
+		}
+		.right ul li .pic {
+			width: 150px;
+			height: 150px;
+			margin: 0 auto;
+		}
+		.pic img{
+			width: 150px;
+			height: 150px;
+		}
+		.title a {
+			font-size: 14px;
+		}
+		.price{
+			font-size: 14px;
+			color: #ffc900;
+		}
+		.dec{
+			margin-top: 10px;
+		}
+		.comments {
+			position: absolute;
+			bottom: -70px;
+			left: 0;
+			width: 170px;
+			height: 70px;
+			background: #f60;
+			padding: 0 32px;
+			transition: 0.5s;
+		}
+		.comments p{
+			margin-top: 25px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="left">
+			<a href=""><img src="images/left.jpg" alt="" width="234" height="614"></a>
+		</div>
+		<div class="right">
+			<ul>
+				<li>
+					<div class="pic">
+						<a href=""><img src="images/cont (1).png" alt="" width="220" height="220"></a>
+					</div>
+					<h3 class="title"><a href="1">小米电视3</a></h3>
+					<p class="price">99元</p>
+					<p class="dec">我是小米电视</p>
+					<div class="comments">
+						<p>屏幕很大很清晰</p>
+					</div>
+				</li>
+				<li>
+					<div class="pic">
+						<a href=""><img src="images/cont (1).png" alt="" width="220" height="220"></a>
+					</div>
+					<h3 class="title"><a href="1">小米电视3</a></h3>
+					<p class="price">99元</p>
+					<p class="dec">我是小米电视</p>
+					<div class="comments">
+						<p>屏幕很大很清晰</p>
+					</div>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
